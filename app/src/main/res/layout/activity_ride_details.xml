@@ -1,0 +1,169 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.bharathmg.bookmyride.RideDetails">
+
+
+        <TextView
+            android:id="@+id/travellerLabel"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:text="Traveller : "
+            android:layout_alignRight="@+id/pickUpLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/travellerName"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/travellerLabel"
+            android:text="Bharath MG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/contactLabel"
+            android:layout_alignRight="@+id/pickUpLabel"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_below="@id/travellerLabel"
+            android:text="Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/contactName"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_alignLeft="@id/travellerName"
+            android:layout_toRightOf="@id/contactLabel"
+            android:layout_below="@id/travellerLabel"
+            android:text="+91967797332"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/pickUpLabel"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:text="Pickup Address"
+            android:layout_below="@id/contactLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/pickUpName"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_alignLeft="@id/travellerName"
+            android:layout_toRightOf="@id/travellerLabel"
+            android:layout_below="@id/contactLabel"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/carLabel"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_alignRight="@+id/pickUpLabel"
+            android:text="Car type"
+            android:layout_below="@id/pickUpName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/carName"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/carLabel"
+            android:layout_alignLeft="@id/travellerName"
+            android:layout_below="@id/pickUpName"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_alignRight="@+id/pickUpLabel"
+            android:layout_below="@id/carLabel"
+            android:text="Pickup Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/timeName"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/timeLabel"
+            android:layout_alignLeft="@id/travellerName"
+            android:text="3:40 am 24/11/14"
+            android:layout_below="@id/carLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drop Point"
+            android:id="@+id/dropView"
+            android:layout_below="@id/timeName"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drop Point"
+            android:id="@+id/dropPointView"
+            android:layout_below="@id/dropView"
+            android:textSize="20dp"/>
+
+        <fragment
+            android:layout_below="@id/dropPointView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/map"
+            tools:context=".Home"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/map">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="Ride"
+                style="@style/TimeButton"
+                android:layout_weight="1"
+                android:id="@+id/ride"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp" />
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                style="@style/TimeButton"
+                android:layout_weight="1"
+                android:id="@+id/cancel"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

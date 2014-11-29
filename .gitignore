@@ -1,0 +1,7 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+/build
+/app/src/main/java/com/bharathmg/bookmyride/com/bharathmg/bookmyride/helpers/Secrets/Secrets.java
+/app/src/debug/res/values/google_maps_api.xml
